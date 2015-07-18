@@ -11,31 +11,46 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/aroundthelines.css">
 	</head>
-	
+
 	<body>
-		<section id="intro">
-			<div class="container text-center">
-				<h1>Hi! My name is</h1>
-				<div class="row"><!--Split the middle of this-->
-					<div class="col-xs-6 col-md-4 col-md-offset-2">
-						<h1>Qile.</h1>
-					</div><!--"I'm Qile"-->
-					<div class="col-xs-6 col-md-4">
-						<h1>Kyle.</h1>
-					</div><!--"I'm Kyle"-->
-				</div><!--Row-->
-				<h2>I like to think <span>*around the lines*</span>.</h2>
-			</div><!--Container-->
-		</section>
 
-		<footer>
-			<div class="container text-center">
-				<p>&#169; Qile Wang 2015. All rights reserved. <br> This site isn't finished yet. In the meantime, please check my <a href="http://www.github.com/aroundthelines">github</a> for projects.</p>
-			</div>
-		</footer>
+		<nav id="main">
+			<header>Does this work?</header>
+		</nav>
 
+		<main id="panel">
+			<section id="intro">
+				<div class="container text-center">
+					<h1>Hi! My name is</h1>
+					<div class="row"><!--Split the middle of this-->
+						<div class="col-xs-6 col-md-4 col-md-offset-2">
+							<h1>Qile.</h1>
+						</div><!--"I'm Qile"-->
+						<div class="col-xs-6 col-md-4">
+							<h1>Kyle.</h1>
+						</div><!--"I'm Kyle"-->
+					</div><!--Row-->
+					<h2>I like to think <span>*around the lines*</span>.</h2>
+				</div><!--Container-->
+			</section>
+
+			<footer>
+				<div class="container text-center">
+					<p>&#169; Qile Wang 2015. All rights reserved. <br> This site isn't finished yet. In the meantime, please check my <a href="http://www.github.com/aroundthelines">github</a> for projects.</p>
+				</div>
+			</footer>
+		</main>
 		<!--Javascript-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script src="js/slideout.min.js"></script>
+		<script>
+		  var slideout = new Slideout({
+		    'panel': document.getElementById('panel'),
+		    'menu': document.getElementById('menu'),
+		    'padding': 256,
+		    'tolerance': 70
+		  });
+		</script>
 	</body>
 </html>
