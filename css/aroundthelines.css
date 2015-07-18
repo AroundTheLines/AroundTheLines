@@ -16,10 +16,14 @@ body{
 	padding-bottom: 0.5em;
 }
 
-#Qile{
-	background-color: yellow;
+.intro-filler{
+	height: 100%;
 }
 
-#Kyle{
+.Qile{
+  background-color: yellow;
+}
+
+.Kyle{
 	background-color: orange;
 }
