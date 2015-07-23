@@ -23,6 +23,7 @@
 
 		<main class="panel" id="panel">
 			<section class="intro" id="intro">
+				<button class="btn btn-default" id="toggle-button" type="submit">☰</button>
 				<div class="container-fluid text-center">
 					<h1>Hi! My name is</h1>
 					<div class="row"><!--Split the middle of this-->
@@ -54,6 +55,10 @@
 		    'menu': document.getElementById('menu'),
 		    'padding': 256,
 		    'tolerance': 70
+		  });
+
+		  $("#test-button").on("click", function(){
+		  	slideout.toggle();
 		  });
 		</script>
 	</body>
