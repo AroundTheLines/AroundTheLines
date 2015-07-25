@@ -1,3 +1,29 @@
+<!--TODO: EVERYTHING ;-;
+	ALARMING: YOUR SIDEBAR IS NOT WHAT YOU EXPECTED. FIX THIS NOW DAMNIT.
+	specifics:
+	-finish sidenav
+		-make icons fit to width
+		-make it collapseable
+		-make it work on mobile by sliding
+		-must work on multiple viewports (use bootstrap definitions)
+	-finish main content
+		-intro
+			-animated background, split into two with Qile and Kyle
+		-about
+			-picture of myself
+			-short blurb
+		-projects
+			-webdev
+				-gtahackathons
+				-explanation of skills
+			-hardware
+				-pillowcase
+				-needs to include detailed knowledge of stack
+			-school
+				-projects worked on
+		-contact
+			-currently working on (requires digitalocean)
+-->
 <!DOCTYPE html>
 <html lang="en-us">
 	<head>
@@ -9,57 +35,37 @@
 
 		<!--External CSS-->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/slideout.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/aroundthelines.css">
 	</head>
 
 	<body>
+		<div id="wrapper">
 
-		<nav class="menu" id="menu">
-			<header>Does this work?</header>
-			<p>just making sure it's going through</p>
-		</nav>
+			<nav id="sidenav-wrapper">
+				<ul class="sidenav">
+					<li class="sidenav-item">
+						<a href="#"><i class="glyphicon glyphicon-menu-hamburger sidenav-toggle" aria-hidden="true"></i><span>Menu</span></a>
+					</li>
+				</ul>
+			</nav>
 
-		<main class="panel" id="panel">
-			<section class="intro" id="intro">
-				<button class="btn btn-default" id="toggle-button" type="submit">☰</button>
-				<div class="container-fluid text-center">
-					<h1>Hi! My name is</h1>
-					<div class="row"><!--Split the middle of this-->
-						<div class="col-xs-6 intro-name Qile">
-							<h1>Qile.</h1>
-						</div><!--"I'm Qile"-->
-						<div class="col-xs-6 intro-name Kyle">
-							<h1>Kyle.</h1>
-						</div><!--"I'm Kyle"-->
-					</div><!--Row-->
-					<h2>I like to think <span>*around the lines*</span>.</h2>
-				</div><!--Container-->
-			</section>
+			<main class="main" id="main">
+				<section>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eros nisl, ornare at varius ac, molestie at neque. Vestibulum suscipit diam sit amet urna condimentum, vel consectetur velit congue. Cras dictum, magna ac ultricies rutrum, nisi nibh sodales nibh, volutpat auctor ipsum metus nec est. Phasellus lacinia laoreet viverra. Donec rutrum mauris ante, at dictum mauris convallis nec. Aenean in eleifend massa. Vestibulum sodales scelerisque tellus, sit amet viverra libero cursus at. Pellentesque posuere massa nec erat ullamcorper, sed pretium turpis pellentesque. Fusce pharetra massa id molestie porta. Integer non purus neque. Phasellus fermentum consequat vehicula. Maecenas egestas eros mollis mi condimentum, nec dictum risus condimentum. Aliquam faucibus arcu nec viverra rhoncus. Aenean lacinia feugiat maximus. Phasellus eget vestibulum ante, ut varius est.</p>
+				</section>
 
-			<footer>
-				<div class="container text-center">
-					<p>&#169; Qile Wang 2015. All rights reserved. <br> This site isn't finished yet. In the meantime, please check my <a href="http://www.github.com/aroundthelines">github</a> for any of my projects.</p>
-				</div>
-			</footer>
-		</main><!--Main body of the code-->
+				<footer>
+					<div class="container text-center">
+						<p>&#169; Qile Wang 2015. All rights reserved. <br> This site isn't finished yet. In the meantime, please check my <a href="http://www.github.com/aroundthelines">github</a> for any of my projects.</p>
+					</div>
+				</footer>
+			</main><!--Main body of the code-->
+		</div>
 
 		<!--Javascript-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script src="js/slideout.min.js"></script>
-		<script>
-		  var slideout = new Slideout({
-		    'panel': document.getElementById('panel'),
-		    'menu': document.getElementById('menu'),
-		    'padding': 256,
-		    'tolerance': 70
-		  });
-
-		  $("#test-button").on("click", function(){
-		  	slideout.toggle();
-		  });
-		</script>
+		<script src="js/aroundthelines.js"></script>
 	</body>
 </html>

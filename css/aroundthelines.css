@@ -2,6 +2,66 @@ body{
 	font-family: "Open Sans", sans-serif;
 	background-color: #f8f8f8;
 }
+#wrapper{
+	padding-left: 0;
+	background-color: yellow;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;	
+}
+
+
+/*---------Nav------------*/
+#sidenav-wrapper{
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  width: 0;
+  height: 100%;
+  margin-left: 0;
+  overflow-y: auto;
+  background: #4e4e4e;
+  color: #ededed;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.sidenav{
+	list-style: none;
+	height: 100%;
+	width: 100%;
+	padding-left: 0;
+}
+
+.sidenav a{
+	width: 100%;
+	font-size: 5.5vh;
+	color: #ededed;
+}
+
+.sidenav a:link{
+	text-decoration: none;
+
+}
+
+.sidenav li a i{
+	display: block;
+	width: 70px;
+	line-height: 70px;
+	text-align: center;
+}
+
+.sidenav li a span{
+	display: none;
+}
+
+#wrapper.toggled .sidenav-label{
+	display: inline;
+}
+
 /*---------Intro----------*/
 .intro{
 
@@ -22,4 +82,38 @@ body{
 
 .Kyle{
 	background-color: orange;
+}
+
+.intro{
+	height: 70vh;
+	width: 100vw;
+}
+
+.about{
+	height: 50vh;
+	width: 100vw;
+
+	background-color: gray;
+}
+
+@media only screen and (min-device-width: 992px){
+	#wrapper{
+		padding-left: 70px;
+	}
+
+	#wrapper.toggled{
+		padding-left: 250px;
+	}
+
+	#sidenav-wrapper{
+    left: 70px;
+    width: 70px;
+    margin-left: -70px;
+	}
+
+	#wrapper.toggled #sidenav-wrapper{
+		left: 250px;
+		width: 250px;
+		margin-left: -250px;
+	}
 }
