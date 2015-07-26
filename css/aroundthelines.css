@@ -11,6 +11,17 @@ body{
 	transition: all 0.5s ease-in-out;	
 }
 
+#main{
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+#wrapper.toggled #main{
+	 background-color: rgba(0,0,0,0.40);
+}
+
 
 /*---------Nav------------*/
 #sidenav-wrapper{
@@ -23,10 +34,10 @@ body{
   overflow-y: auto;
   background: #4e4e4e;
   color: #ededed;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 .sidenav{
@@ -38,28 +49,36 @@ body{
 
 .sidenav a{
 	width: 100%;
-	font-size: 5.5vh;
+	line-height: 66px;
+	font-size: 5vh;
 	color: #ededed;
+	text-align: center;
+	overflow: hidden;
 }
 
 .sidenav a:link{
 	text-decoration: none;
-
 }
 
 .sidenav li a i{
-	display: block;
-	width: 70px;
-	line-height: 70px;
+	display: inline-block;
+	width: 66px;
+	
 	text-align: center;
+
 }
 
 .sidenav li a span{
-	display: none;
+  opacity: 0;
 }
 
-#wrapper.toggled .sidenav-label{
-	display: inline;
+#wrapper.toggled .sidenav li a span{
+  transition: none;
+  -webkit-transition: none;
+  position: absolute;
+  opacity: 1;
+  animation: fade-in-left 0.5s ease-out;
+  -webkit-animation: fade-in-left 0.5s ease-out;
 }
 
 /*---------Intro----------*/
@@ -92,24 +111,79 @@ body{
 .about{
 	height: 50vh;
 	width: 100vw;
-
 	background-color: gray;
 }
 
 @media only screen and (min-device-width: 992px){
 	#wrapper{
-		padding-left: 70px;
+		padding-left: 66px;
 	}
 
 	#sidenav-wrapper{
-    left: 70px;
-    width: 70px;
-    margin-left: -70px;
+    left: 66px;
+    width: 66px;
+    margin-left: -66px;
 	}
 
 	#wrapper.toggled #sidenav-wrapper{
-		left: 250px;
-		width: 250px;
-		margin-left: -250px;
+		left: 300px;
+		width: 300px;
+		margin-left: -300px;
 	}
+}
+
+@-webkit-keyframes fade-in-left {
+  0% {
+    	opacity: 0;
+    	transform: translateX(-200px);
+	    -webkit-transform: translateX(-200px); 
+	}
+
+  100% {
+    	opacity: 1;
+    	transform: translateX(0);
+	    -webkit-transform: translateX(0); 
+    }
+}
+
+@-moz-keyframes fade-in-left {
+  0% {
+    	opacity: 0;
+    	transform: translateX(-200px);
+    	-webkit-transform: translateX(-200px); 
+    }
+
+  100% {
+    	opacity: 1;
+    	transform: translateX(0);
+	    -webkit-transform: translateX(0); 
+    } 
+}
+
+@-o-keyframes fade-in-left {
+  0% {
+    	opacity: 0;
+    	transform: translateX(-200px);
+    	-webkit-transform: translateX(-200px); 
+	}
+
+  100% {
+    	opacity: 1;
+    	transform: translateX(0);
+    	-webkit-transform: translateX(0);
+	} 
+}
+
+@keyframes fade-in-left {
+  0% {
+    	opacity: 0;
+	    transform: translateX(-200px);
+    	-webkit-transform: translateX(-200px);
+    }
+
+  100% {
+    	opacity: 1;
+    	transform: translateX(0);
+    	-webkit-transform: translateX(0);
+    }
 }
