@@ -19,7 +19,10 @@ body{
 }
 
 #wrapper.toggled #main{
-	 background-color: rgba(0,0,0,0.40);
+	background-color: rgba(0,0,0,0.45);
+  -moz-box-shadow: inset 0 0 50px #000000;
+  -webkit-box-shadow: inset 0 0 50px #000000;
+  box-shadow: inset 0 0 50px #000000;
 }
 
 
@@ -31,7 +34,8 @@ body{
   width: 0;
   height: 100%;
   margin-left: 0;
-  overflow-y: auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
   background: #4e4e4e;
   color: #ededed;
   -webkit-transition: all 0.5s ease-in-out;
@@ -95,34 +99,6 @@ body{
 
 }
 
-.intro > div{
-	padding-top: 4em;
-}
-
-.intro-name{
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-}
-
-.Qile{
-  background-color: yellow;
-}
-
-.Kyle{
-	background-color: orange;
-}
-
-.intro{
-	height: 70vh;
-	width: 100vw;
-}
-
-.about{
-	height: 50vh;
-	width: 100vw;
-	background-color: gray;
-}
-
 @media only screen and (min-device-width: 992px){
 	#wrapper{
 		padding-left: 66px;
@@ -138,8 +114,12 @@ body{
 		left: 300px;
 		width: 300px;
 		margin-left: -300px;
+    -moz-box-shadow: 0 0 50px #000000;
+    -webkit-box-shadow: 0 0 50px #000000;
+    box-shadow: 0 0 50px #000000;  
 	}
 }
+/*----------keyframes--------------*/
 
 /*Side navigation bar description fade in*/
 @-webkit-keyframes fade-in-left {
