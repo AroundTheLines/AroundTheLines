@@ -1,0 +1,30 @@
+{
+  "name": "AroundTheLines.github.io",
+  "version": "0.0.1",
+  "homepage": "https://github.com/AroundTheLines/AroundTheLines.github.io",
+  "authors": [
+    "Qile Wang <wangqile123@gmail.com>"
+  ],
+  "description": "Personal site for Qile Wang",
+  "main": "index.html",
+  "keywords": [
+    "personal",
+    "site",
+    "polymer"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gold-elements": "PolymerElements/gold-elements#~1.0.1",
+    "iron-elements": "PolymerElements/iron-elements#~1.0.3",
+    "paper-elements": "PolymerElements/paper-elements#~1.0.5",
+    "paper-icon-button": "PolymerElements/paper-icon-button#~1.0.3",
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}
