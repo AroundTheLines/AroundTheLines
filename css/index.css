@@ -1,6 +1,10 @@
+html,
+body{
+	color: #888888;
+	font-family: 'Open Sans', sans-serif;
+}
+
 .intro-section{
-	height: 70%;
-	width: 100%;
 	background: url(../img/introbg.jpeg) no-repeat center;
 	background-size: 100% 100%;
 }
