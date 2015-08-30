@@ -1,4 +1,6 @@
 .intro-section{
-	background: url(../img/introbg.jepg) no-repeat center;
-	background-size: 100% 50%;
+	height: 70%;
+	width: 100%;
+	background: url(../img/introbg.jpeg) no-repeat center;
+	background-size: 100% 100%;
 }
