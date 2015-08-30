@@ -4,6 +4,10 @@ body{
 	font-family: 'Open Sans', sans-serif;
 }
 
+.menu-section{
+	position: fixed;
+}
+
 .intro-section{
 	background: url(../img/introbg.jpeg) no-repeat center;
 	background-size: 100% 100%;
