@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal site for Qile Wang">
-  <meta name="author" content="Qile Wang">
+  <meta description="Personal Site for Qile Wang">
+  <meta author="Qile Wang">
+	<title>Qile Wang</title>
 
-  <title>Qile Wang</title>
-  <!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
-  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-
-  <!--Custom Polymer Elements-->
-  <link rel="import" href="bower_components/paper-button/paper-button.html">
-  <link rel="import" href="bower_components/paper-input/paper-input.html">
-  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-
-  <!--Css Imports-->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
-
 <body>
-  <section class="menu-section">
-    <paper-icon-button icon="menu"></paper-icon-button>
-  </section>
-  <section class="intro-section">
-    <!-- 3. Declare the element. Configure using its attributes. -->
-    <paper-input label="Your name here"></paper-input>
-    <paper-button raised>Say Hi!</paper-button>
-    <div id="greeting"></div>
-  </section>
+	<svg viewBox="0 0 1000 650">
 
-  <script>
-    // To ensure that elements are ready on polyfilled browsers, 
-    // wait for WebComponentsReady. 
-    document.addEventListener('WebComponentsReady', function() {
-      var input = document.querySelector('paper-input');
-      var button = document.querySelector('paper-button');
-      var greeting = document.getElementById("greeting");
-      button.addEventListener('click', function() {
-        greeting.textContent = 'Hello, ' + input.value;
-      });
-    });
-  </script>
+	  <!-- Symbol -->
+	  <symbol id="s-text">
+	    <text text-anchor="middle" x="50%" y="50%" dy="-.1em">
+	        Qile Wang
+	     </text>
+	  </symbol>
+
+	  <!-- Duplicate symbols -->
+	  <use xlink:href="#s-text" class="text"></use>
+	  <use xlink:href="#s-text" class="text"></use>
+	  <use xlink:href="#s-text" class="text"></use>
+	  <use xlink:href="#s-text" class="text"></use>
+	  <use xlink:href="#s-text" class="text"></use>
+
+	</svg>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2 col-md-offset-5">
+				<a class="btn" href="resumeAug2015.pdf">Resume</a>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
