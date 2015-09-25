@@ -1,103 +1,524 @@
-/* Main styles */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
-
-.text {
-  fill: none;
-  stroke-width: 6;
-  stroke-linejoin: round;
-  stroke-dasharray: 70 330;
-  stroke-dashoffset: 0;
-  -webkit-animation: stroke 6s infinite linear;
-  animation: stroke 6s infinite linear;
+*{
+  box-sizing: border-box;
 }
 
-.text:nth-child(5n + 1) {
-  stroke: #F2385A;
-  -webkit-animation-delay: -1.2s;
-  animation-delay: -1.2s;
-}
-.text:nth-child(5n + 2) {
-  stroke: #F5A503;
-  -webkit-animation-delay: -2.4s;
-  animation-delay: -2.4s;
+html,
+body{
+  font-family: 'Raleway', sans-serif;
+  color: #f3f3f3;
 }
 
-.text:nth-child(5n + 3) {
-  stroke: #E9F1DF;
-  -webkit-animation-delay: -3.6s;
-  animation-delay: -3.6s;
+.muted{
+  opacity: 0.6;
 }
 
-.text:nth-child(5n + 4) {
-  stroke: #56D9CD;
-  -webkit-animation-delay: -4.8s;
-  animation-delay: -4.8s;
+.golden{
+  color: #FADA5E;
 }
 
-.text:nth-child(5n + 5) {
-  stroke: #3AA1BF;
-  -webkit-animation-delay: -6s;
-  animation-delay: -6s;
+/*All the CSS for the "Intro" section*/
+#intro{
+  width: 100vw;
+  height: 100vh;
+
+  display: table;
+
+  background-color: #262324;
 }
 
-@-webkit-keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
+.intro-container{
+  position: relative;
+  margin-top: 36vh;
+  margin-left: 2vw;
 }
 
-@keyframes stroke {
-  100% {
-    stroke-dashoffset: -400;
-  }
+.intro-container h1{
+  font-size: 10vh;
+  line-height: 80%;
+  text-decoration: none;
 }
 
-/* Other styles */
-html, body {
-  height: 100%;
+.intro-container h4{
+  line-height: 30%;
 }
 
-body {
-  background: #111;
-  background-size: .2em 100%;
-  font: 14.5em/1 Open Sans, Impact;
-  margin: 0;
-  text-transform: uppercase;
+.intro-container hr{
+  margin: auto;
 }
 
-svg {
+.intro-container a{
+  color: #f3f3f3;
+}
+
+.view-work {
+  position: relative;
+  float: right;
+  margin-right: 0.7vw;
+  margin-top: 0vh;
+
+  display: inline-block;
+  overflow: hidden;
+  width: 1.5em;
+
+  font-size: 3vh;
+
+  animation-name: bounce;
+  animation-direction: alternate;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.view-work:hover{
+  color: #FADA5E;
+}
+
+.view-work-inner{
+  display: inline-block;
+  white-space: nowrap;
+  /* this is for shity "non IE" browsers
+     that dosn't support writing-mode */
+  -webkit-transform: translate(1.1em,0) rotate(90deg);
+     -moz-transform: translate(1.1em,0) rotate(90deg);
+       -o-transform: translate(1.1em,0) rotate(90deg);
+          transform: translate(1.1em,0) rotate(90deg);
+  -webkit-transform-origin: 0 0;
+     -moz-transform-origin: 0 0;
+       -o-transform-origin: 0 0;
+          transform-origin: 0 0;
+ /* IE9+ */
+ -ms-transform: none;
+ -ms-transform-origin: none;
+ /* IE8+ */
+ -ms-writing-mode: tb-rl;
+ /* IE7 and below */
+ *writing-mode: tb-rl;
+}
+.view-work-inner:before{
+  content: "";
+  float: right;
+  margin-top: 100%;
+}
+@keyframes bounce {
+  from {margin-top: -25vh;}
+  to {margin-top: -19vh;}
+}
+
+/*All the CSS for the "Projects" section*/
+.project-container{
+  height: 700px;
+}
+
+.project-container > .container{
+}
+
+.project-container > .container > .row{
+  position: relative;
+  bottom: -219px;
+}
+
+.project-container > .container > .row > .col-md-3{
+  position: relative;
+  margin: auto;
+
+  text-align: right;
+}
+
+.project-container > .container > .row > .col-md-3 > hr{
+  margin: auto;
+  margin-top: -7px;
+}
+.project-container > .container > .row > .col-md-3 > h6{
+  margin: auto;
+  font-size: 2vh;
+  line-height: 130%;
+  font-weight: bold;
+}
+.project-container > .container > .row > .col-md-3 > h5{
+  font-size: 2.7vh;
+}
+.project-container > .container > .row > .col-md-3 > p{
+  font-size: 1.8vh;
+}
+
+.project-container .bar{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 1px;
+  background: #262324;
+  background-color: rgba(37,34,35,0.5);
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.project-container .gui{
+  margin: 0 10px;
+}
+
+.project-container .bar .gui .circle {
+  width: 8px;
+  height: 8px;
+  margin: 11px 3px;
+  float: left;
+  background: #262324;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/*GTAHackathons CSS*/
+#gtahackathons{
+  color: white;
+  background-color: #0F3358;
+}
+
+#gtahackathons .circle{
+  background-color: #0F3358;
+}
+
+#gtahackathons .carousel-indicators li{
+  background-color: #0F3358;
+}
+
+/*Mr.Tutor GTA CSS*/
+#mrtutorgta{
+  color: #262324;
+  background-color: #D4AF37;
+}
+
+#mrtutorgta .circle{
+  background-color: #D4AF37;
+}
+
+#mrtutorgta hr{
+  border-color: #262326;
+}
+
+#mrtutorgta .carousel-indicators li{
+  background-color: #D4AF37;
+}
+
+/*Culturefest CSS*/
+#culturefest{
+  color: white;
+  background-color: #015C5B;
+}
+
+#culturefest .circle{
+  background-color: #015C5B;
+}
+
+#culturefest .carousel-indicators li{
+  background-color: #015C5B;
+}
+
+/*PillowCase CSS*/
+#pillow-case{
+  color: white;
+  background-color: #78A22F;
+}
+
+#pillow-case .circle{
+  background-color: #78A22F;
+}
+
+#pillow-case hr{
+  border-color: white;
+}
+
+#pillow-case .carousel-indicators li{
+  background-color: #78A22F;
+}
+
+/*Container for all social elements
+------------------------------------------------*/
+.outro-container{
+  position: relative;
+  height: 94vh;
+}
+
+.outro-container .blog{
   position: absolute;
+  left: 0;
+
+  margin: auto;
+  height: 100%;
+  background-color: #e6e6e6;
+
+  color: #262324;
+}
+
+.outro-container .blog a{
+  color: #262324;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.outro-container .vertically-challenged{
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  z-index: 10 !important;  
+}
+
+.outro-container .resume{
+  position: absolute;
+  right: 0;
+
+  height: 100%;
+  background-color: #504d50;
+}
+
+.outro-container .resume a{
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*Footer CSS*/
+footer{
+  height: 6em;
+  background-color: #262324;
+}
+
+footer .container{
+  position: relative;
+  top: 50%;
+  text-align: center;
+
+  transform: translateY(-50%);
+}
+
+footer span{
+  font-size: 3em;
+  font-weight: bold;
+}
+
+footer a,
+footer a:hover{
+  text-decoration: underline;
+  color: white;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+---------------------------------------------------------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 450px;
+  margin-bottom: 60px;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 450px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 450px;
+}
+
+/*Laptop CSS
+---------------------------------------------------------*/
+.laptop:before {
+  top: -10px;
+  margin: -3px 0 0 -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #a5adbd;
+}
+
+.content {
+  width: 420px;
+  height: 240px;
+  left: 50%;
+  margin-left: -210px;
+  overflow: hidden;
+}
+
+.content:before {
+  content: "";
+  position: absolute;
+  right: -90px;
+  width: 200px;
+  height: 300px;
+  transform: rotate(45deg);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 5;
+}
+
+.laptop {
+  width: 235px;
+  height: 155px;
+  background: rgba(230, 230, 230, 0.6);
+  border: 12px solid #e8ebf0;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.laptop:before {
+  top: -6px;
+}
+
+.laptop > div {
+  position: absolute;
+}
+
+.laptop > .content {
+  width: 211px;
+  height: 131px;
+  left: 0;
+  margin-left: 0;
+}
+
+.btm {
+  width: 296px;
+  height: 7px;
+  bottom: -19px;
+  left: 50%;
+  margin-left: -148px;
+  border-radius: 0 0 20px 20px;
+  background: #f4f5f7;
+  z-index: 1;
+}
+
+.btm:before {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 3px;
+  left: 50%;
+  top: 0;
+  margin-left: -21px;
+  border-radius: 0 0 5px 5px;
+  background: #d8dbe1;
+}
+
+.shadow {
+  position: absolute;
+  width: 350px;
+  height: 18px;
+  left: 50%;
+  margin-left: -175px;
+  z-index: -1;
+  bottom: -20px;
+  background: radial-gradient(ellipse at center, rgba(48, 46, 48, 1) 0%, rgba(48, 46, 48, 1) 53%, rgba(42, 78, 53, 1) 55%, rgba(42, 78, 53, 0) 55%, rgba(42, 78, 53, 0) 100%);
+  transform: translateY(10%);
+}
+
+.laptop .shadow {
+  width: 450px;
+  margin-left: -225px;
+  bottom: -26px;
+}
+
+/* CSS Resume
+----------------------------------------------------*/
+.doc-icon {
+  background:#f9f9f9;
+  border:1px solid #ccc;
+  -moz-border-radius:3px 15px 3px 3px;
+  -webkit-border-radius:3px 15px 3px 3px;
+  border-radius:3px 30px 3px 3px;
+  -moz-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+  -webkit-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+  box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+  display:block;
+  width:173px;
+  height:235px;
+  position: absolute;
+  text-indent:-9999em;
+  margin:42px auto;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1 !important;
+}
+
+.doc-icon:before {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  right:0;
+  width:25px;
+  height:25px;
+  background:#ccc;
+  background:-moz-linear-gradient(70deg, #fff 0,  #eee 50%, #ccc 100%);
+  background:-webkit-linear-gradient(45deg, #fff 0,  #eee 50%, #ccc 100%);
+  box-shadow:rgba(0,0,0,0.05) -1px 1px 1px, inset white 0 0 1px;
+  border-bottom:1px solid #ccc;
+  border-left:1px solid #ccc;
+  -moz-border-radius:0 30px 0 0;
+  -webkit-border-radius:0 30px 0 0;
+  border-radius:0 30px 0 0;
+}
+
+.doc-line-1{
+  position: absolute;
+  width: 120px;
+  height: 10px;
+  background: #ccc;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.doc-line-2{
+  position: absolute;
+  width: 120px;
+  height: 10px;
+  background: #ccc;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.doc-line-3{
+  position: absolute;
+  width: 120px;
+  height: 10px;
+  background: #ccc;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader{ 
+  display: none;  
+}
+
+.js #loader{ 
+  display: block;
+  position: absolute; 
+  left: 100px; 
+  top: 0; 
+}
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
   width: 100%;
   height: 100%;
-}
-
-.btn {
-    margin-top: 57vh;
-    opacity: 1;
-    padding: 2vh 2vw;
-    font-size: 2.5vh;
-    font-family: sans-serif;
-    border-radius: 1vh;
-    border-color: white;
-    background: transparent;
-    color: #F9F9F9;
-
-    -webkit-transition: background .3s ease;
-       -moz-transition: background .3s ease;
-        -ms-transition: background .3s ease;
-         -o-transition: background .3s ease;
-            transition: background .3s ease;
-    /*-webkit-animation: buttonAppear 2.5s linear 1 forwards alternate;
-    animation: buttonAppear 2.5s linear 1 forwards alternate;*/
-}
-
-.btn:hover {
-    background-color: #F9F9F9;
-    color: #000000;
-
-    -webkit-transition: background .5s ease;
-       -moz-transition: background .5s ease;
-        -ms-transition: background .5s ease;
-         -o-transition: background .5s ease;
-            transition: background .5s ease;
+  z-index: 9999;
+  background: url(img/load.gif) center no-repeat #fff;
 }
