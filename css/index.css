@@ -12,7 +12,8 @@ body{
   opacity: 0.6;
 }
 
-.golden{
+.golden,
+.golden:visited{
   color: #FADA5E;
 }
 
