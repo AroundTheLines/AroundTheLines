@@ -301,7 +301,8 @@ footer span{
 }
 
 footer a,
-footer a:hover{
+footer a:hover,
+footer a:visited{
   text-decoration: underline;
   color: white;
 }
