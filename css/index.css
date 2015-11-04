@@ -133,12 +133,9 @@ body{
   height: 700px;
 }
 
-.project-container > .container{
-}
-
 .project-container > .container > .row{
   position: relative;
-  bottom: -219px;
+  bottom: -50%;
 }
 
 .project-container > .container > .row > .col-md-3{
@@ -564,5 +561,9 @@ footer a:visited{
     width: 61px;
     height: 5px;
     border-radius: 2px;
+  }
+
+  footer .col-xs-2{
+    font-size: 1.8vh;
   }
 }
