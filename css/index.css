@@ -1,3 +1,26 @@
+/*Css for loading icon*/
+.no-js #loader{ 
+  display: none;  
+}
+
+.js #loader{ 
+  display: block;
+  position: absolute; 
+  left: 100px; 
+  top: 0; 
+}
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url(img/load.gif) center no-repeat #262626;
+}
+
+/*My CSS*/
+
 *{
   box-sizing: border-box;
 }
@@ -242,7 +265,7 @@ body{
   height: 94vh;
 }
 
-.outro-container .blog{
+.outro-container .resume{
   position: absolute;
   left: 0;
 
@@ -253,7 +276,7 @@ body{
   color: #262324;
 }
 
-.outro-container .blog a{
+.outro-container .resume a{
   color: #262324;
   font-weight: bold;
   text-decoration: underline;
@@ -267,7 +290,7 @@ body{
   z-index: 10 !important;  
 }
 
-.outro-container .resume{
+.outro-container .blog{
   position: absolute;
   right: 0;
 
@@ -275,7 +298,7 @@ body{
   background-color: #504d50;
 }
 
-.outro-container .resume a{
+.outro-container .blog a{
   color: white;
   font-weight: bold;
   text-decoration: underline;
@@ -329,6 +352,70 @@ footer a:visited{
   height: 450px;
 }
 
+/* CSS Resume
+----------------------------------------------------*/
+.doc-icon {
+  background:#f9f9f9;
+  border:1px solid #ccc;
+  -moz-border-radius:3px 15px 3px 3px;
+  -webkit-border-radius:3px 15px 3px 3px;
+  border-radius:3px 30px 3px 3px;
+  -moz-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+  -webkit-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+  box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+  display:block;
+  width:173px;
+  height:235px;
+  position: absolute;
+  text-indent:-9999em;
+  margin:42px auto;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1 !important;
+}
+
+.doc-icon:before {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  right:0;
+  width:25px;
+  height:25px;
+  background:#ccc;
+  background:-moz-linear-gradient(70deg, #fff 0,  #eee 50%, #ccc 100%);
+  background:-webkit-linear-gradient(45deg, #fff 0,  #eee 50%, #ccc 100%);
+  box-shadow:rgba(0,0,0,0.05) -1px 1px 1px, inset white 0 0 1px;
+  border-bottom:1px solid #ccc;
+  border-left:1px solid #ccc;
+  -moz-border-radius:0 30px 0 0;
+  -webkit-border-radius:0 30px 0 0;
+  border-radius:0 30px 0 0;
+}
+
+.doc-line{
+  position: absolute;
+  width: 120px;
+  height: 10px;
+  background: #ccc;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.doc-line-1{
+  top: 50%;
+}
+
+.doc-line-2{
+  top: 40%;
+}
+
+.doc-line-3{
+  top: 60%;
+}
+
 /*Laptop CSS
 ---------------------------------------------------------*/
 .laptop:before {
@@ -338,25 +425,6 @@ footer a:visited{
   height: 6px;
   border-radius: 6px;
   background: #a5adbd;
-}
-
-.content {
-  width: 420px;
-  height: 240px;
-  left: 50%;
-  margin-left: -210px;
-  overflow: hidden;
-}
-
-.content:before {
-  content: "";
-  position: absolute;
-  right: -90px;
-  width: 200px;
-  height: 300px;
-  transform: rotate(45deg);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 5;
 }
 
 .laptop {
@@ -373,6 +441,25 @@ footer a:visited{
 
 .laptop:before {
   top: -6px;
+}
+
+.content {
+  width: 0px;
+  height: 240px;
+  left: 50%;
+  margin-left: -210px;
+  overflow: hidden;
+}
+
+.content:before {
+  content: "";
+  position: absolute;
+  right: -90px;
+  width: 200px;
+  height: 300px;
+  transform: rotate(45deg);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 5;
 }
 
 .laptop > div {
@@ -427,79 +514,61 @@ footer a:visited{
   bottom: -26px;
 }
 
-/* CSS Resume
-----------------------------------------------------*/
-.doc-icon {
-  background:#f9f9f9;
-  border:1px solid #ccc;
-  -moz-border-radius:3px 15px 3px 3px;
-  -webkit-border-radius:3px 15px 3px 3px;
-  border-radius:3px 30px 3px 3px;
-  -moz-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
-  -webkit-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
-  box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
-  display:block;
-  width:173px;
-  height:235px;
-  position: absolute;
-  text-indent:-9999em;
-  margin:42px auto;
-  bottom: 2%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1 !important;
+
+@media (max-width: 768px){
+  .intro-container h1{
+    font-size: 8vh;
+  }
+
+  .laptop{
+    width: 120px;
+    height: 79px;
+    border: 6px solid #e8ebf0;
+    border-radius: 5px 5px 0 0;
+  }
+  .laptop > .content{
+    width: 108px;
+    height: 67px;
+  }
+  .laptop > .btm{
+    width: 151px;
+    height: 4px;
+    bottom: -10px; /* height + laptop border*/
+    margin-left: -76px;
+  }
+  .laptop > .shadow{
+    width: 210px;
+    height: 9px;
+    bottom: -15px;
+    margin-left: -105px;
+  }
+
+  .doc-icon{
+
+  }
+  .doc-line{
+
+  }
 }
 
-.doc-icon:before {
-  content:"";
-  display:block;
-  position:absolute;
-  top:0;
-  right:0;
-  width:25px;
-  height:25px;
-  background:#ccc;
-  background:-moz-linear-gradient(70deg, #fff 0,  #eee 50%, #ccc 100%);
-  background:-webkit-linear-gradient(45deg, #fff 0,  #eee 50%, #ccc 100%);
-  box-shadow:rgba(0,0,0,0.05) -1px 1px 1px, inset white 0 0 1px;
-  border-bottom:1px solid #ccc;
-  border-left:1px solid #ccc;
-  -moz-border-radius:0 30px 0 0;
-  -webkit-border-radius:0 30px 0 0;
-  border-radius:0 30px 0 0;
+@media ((min-width: 768px) and (max-width: 992px){
+  .laptop{
+
+  }
+  .laptop > .content{
+
+  }
+  .laptop > .btm{
+
+  }
+  .laptop > .shadow{
+    
+  }
+
+  .doc-icon{
+
+  }
+  .doc-line{
+
+  }
 }
-
-.doc-line-1{
-  position: absolute;
-  width: 120px;
-  height: 10px;
-  background: #ccc;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 3px;
-}
-
-.doc-line-2{
-  position: absolute;
-  width: 120px;
-  height: 10px;
-  background: #ccc;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 3px;
-}
-
-.doc-line-3{
-  position: absolute;
-  width: 120px;
-  height: 10px;
-  background: #ccc;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 3px;
-}
-
-
