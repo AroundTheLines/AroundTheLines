@@ -354,15 +354,7 @@ footer a:visited{
 
 /* CSS Resume
 ----------------------------------------------------*/
-.doc-icon {
-  background:#f9f9f9;
-  border:1px solid #ccc;
-  -moz-border-radius:3px 15px 3px 3px;
-  -webkit-border-radius:3px 15px 3px 3px;
-  border-radius:3px 30px 3px 3px;
-  -moz-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
-  -webkit-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
-  box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+.doc-icon {  
   display:block;
   width:173px;
   height:235px;
@@ -373,6 +365,14 @@ footer a:visited{
   left: 50%;
   transform: translateX(-50%);
   z-index: 1 !important;
+  background:#f9f9f9;
+  border:1px solid #ccc;
+  -moz-border-radius:3px 15px 3px 3px;
+  -webkit-border-radius:3px 15px 3px 3px;
+  border-radius:3px 30px 3px 3px;
+  -moz-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+  -webkit-box-shadow:inset rgba(255,255,255,0.8) 0 1px 1px;
+  box-shadow: inset rgba(255,255,255,0.8) 0 1px 1px;
 }
 
 .doc-icon:before {
@@ -515,7 +515,7 @@ footer a:visited{
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 767px){
   .intro-container h1{
     font-size: 8vh;
   }
@@ -536,39 +536,33 @@ footer a:visited{
     bottom: -10px; /* height + laptop border*/
     margin-left: -76px;
   }
+  .laptop > .btm:before{
+    width: 20px;
+    height: 2px;
+    margin-left: -10px;
+  }
   .laptop > .shadow{
     width: 210px;
     height: 9px;
-    bottom: -15px;
+    bottom: -14px;
     margin-left: -105px;
   }
 
   .doc-icon{
-
+    width: 90px;
+    height: 120px;
+    bottom: 0;
+    -moz-border-radius: 0 15px 0 0;
+    -webkit-border-radius: 0 15px 0 0;
+    border-radius: 0 15px 0 0;
+  }
+  .doc-icon:before{
+    width: 13px;
+    height: 13px;
   }
   .doc-line{
-
-  }
-}
-
-@media ((min-width: 768px) and (max-width: 992px){
-  .laptop{
-
-  }
-  .laptop > .content{
-
-  }
-  .laptop > .btm{
-
-  }
-  .laptop > .shadow{
-    
-  }
-
-  .doc-icon{
-
-  }
-  .doc-line{
-
+    width: 61px;
+    height: 5px;
+    border-radius: 2px;
   }
 }
