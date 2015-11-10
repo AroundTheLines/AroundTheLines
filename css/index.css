@@ -135,7 +135,7 @@ body{
 
 .project-container > .container > .row{
   position: relative;
-  bottom: -50%;
+  bottom: -219px;
 }
 
 .project-container > .container > .row > .col-md-3{
@@ -513,6 +513,11 @@ footer a:visited{
 
 
 @media (max-width: 767px){
+  .project-container > .container > .row{
+    position: relative;
+    bottom: -50%;
+  }
+
   .intro-container h1{
     font-size: 8vh;
   }
