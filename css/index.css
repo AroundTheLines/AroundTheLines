@@ -42,7 +42,7 @@ body{
 
 /*All the CSS for the "Intro" section*/
 #intro{
-  width: 100vw;
+  width: 99vw;
   height: 100vh;
 
   display: table;
