@@ -596,6 +596,15 @@ footer a:visited{
   footer .col-xs-2{
     font-size: 1.8vh;
   }
+
+  .footer-link{
+    position: relative;
+    top: 7px;
+  }
+
+  .bottom-logo{
+    margin-left: -12px;
+  }
 }
 
 @keyframes bounce {
