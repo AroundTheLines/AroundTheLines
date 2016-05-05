@@ -16,7 +16,7 @@
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url(img/load.gif) center no-repeat #262626;
+  background: url(../img/load.gif) center no-repeat #262626;
 }
 
 /*My CSS*/
@@ -123,10 +123,7 @@ body{
   float: right;
   margin-top: 100%;
 }
-@keyframes bounce {
-  from {margin-top: -25vh;}
-  to {margin-top: -19vh;}
-}
+
 
 /*All the CSS for the "Projects" section*/
 .project-container{
@@ -513,6 +510,34 @@ footer a:visited{
 
 
 @media (max-width: 767px){
+  .view-work{
+    animation-name: bounce-mobile;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  #gtahackathons{
+    height: 767px;
+  }
+
+  #mrtutorgta{
+    height: 785px;
+  }
+
+  #culturefest{
+    height: 804px;
+  }
+
+  #pillow-case{
+    height: 785px;
+  }
+
+  .project-container .container .row .col-md-3{
+    text-align: left;
+  }
+
   .project-container > .container > .row{
     position: relative;
     bottom: -50%;
@@ -571,4 +596,14 @@ footer a:visited{
   footer .col-xs-2{
     font-size: 1.8vh;
   }
+}
+
+@keyframes bounce {
+  from {margin-top: -25vh;}
+  to {margin-top: -19vh;}
+}
+
+@keyframes bounce-mobile {
+  from {margin-top: -31vh;}
+  to {margin-top: -25vh;}
 }
